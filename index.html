@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form with Tailwind CSS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 min-h-screen py-10">
+    <div
+      class="container mx-auto px-4 flex items-center justify-center max-w-2xl"
+    >
+      <div class="bg-white p-8 rounded shadow-md w-full">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">
+          Sample Form
+        </h2>
+        <form class="flex flex-col gap-4 items-start justify-center">
+          <div class="w-full flex flex-col gap-2">
+            <label class="block text-gray-700 text-sm font-bold" for="text">
+              Text
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="text"
+              type="text"
+              placeholder="Enter text"
+            />
+            <p id="text-error" class="text-red-500 text-sm mt-1"></p>
+          </div>
+
+          <!-- Email Input -->
+          <div class="w-full flex flex-col gap-2">
+            <label class="block text-gray-700 text-sm font-bold" for="email">
+              Email
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              type="email"
+              placeholder="Enter email"
+            />
+            <p id="email-error" class="text-red-500 text-sm mt-1"></p>
+          </div>
+
+          <!-- Password Input -->
+          <div class="w-full flex flex-col gap-2">
+            <label class="block text-gray-700 text-sm font-bold" for="password">
+              Password
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="password"
+              type="password"
+              placeholder="Enter password"
+            />
+            <p id="password-error" class="text-red-500 text-sm mt-1"></p>
+          </div>
+
+          <!-- Number Input -->
+          <div class="w-full flex flex-col gap-2">
+            <label class="block text-gray-700 text-sm font-bold" for="number">
+              Number
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="number"
+              type="number"
+              placeholder="Enter number"
+            />
+            <p id="number-error" class="text-red-500 text-sm mt-1"></p>
+          </div>
+
+          <!-- Date Input -->
+          <div class="w-full flex flex-col gap-2">
+            <label class="block text-gray-700 text-sm font-bold" for="date">
+              Date
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="date"
+              type="date"
+            />
+            <p id="date-error" class="text-red-500 text-sm mt-1"></p>
+          </div>
+
+          <!-- File Input -->
+          <div class="w-full flex flex-col gap-2">
+            <label class="block text-gray-700 text-sm font-bold" for="file">
+              File
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="file"
+              type="file"
+            />
+            <p id="file-error" class="text-red-500 text-sm mt-1"></p>
+          </div>
+
+          <!-- Select Input -->
+          <div class="w-full flex flex-col gap-2">
+            <label class="block text-gray-700 text-sm font-bold" for="select">
+              Select
+            </label>
+            <select
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="select"
+            >
+              <option value="">Select an option</option>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+            <p id="select-error" class="text-red-500 text-sm mt-1"></p>
+          </div>
+
+          <!-- Radio Buttons -->
+          <div class="w-full flex flex-col gap-2">
+            <label class="block text-gray-700 text-sm font-bold"> Radio </label>
+            <div class="flex items-center">
+              <input
+                class="mr-2 leading-tight"
+                type="radio"
+                id="radio1"
+                name="radio"
+                value="1"
+              />
+              <label class="text-gray-700" for="radio1">Option 1</label>
+            </div>
+            <div class="flex items-center">
+              <input
+                class="mr-2 leading-tight"
+                type="radio"
+                id="radio2"
+                name="radio"
+                value="2"
+              />
+              <label class="text-gray-700" for="radio2">Option 2</label>
+            </div>
+            <p id="radio-error" class="text-red-500 text-sm mt-1"></p>
+          </div>
+
+          <!-- Checkbox -->
+          <div class="w-full flex flex-col gap-2">
+            <label class="block text-gray-700 text-sm font-bold">
+              Checkbox
+            </label>
+            <div class="flex items-center">
+              <input
+                class="mr-2 leading-tight"
+                type="checkbox"
+                id="checkbox"
+                name="checkbox"
+              />
+              <label class="text-gray-700" for="checkbox">Check me</label>
+            </div>
+            <p id="checkbox-error" class="text-red-500 text-sm mt-1"></p>
+          </div>
+
+          <!-- Range Input -->
+          <div class="w-full flex flex-col gap-2">
+            <label class="block text-gray-700 text-sm font-bold" for="range">
+              Range
+            </label>
+            <input class="w-full" id="range" type="range" min="0" max="100" />
+            <p id="range-error" class="text-red-500 text-sm mt-1"></p>
+          </div>
+          <div class="w-full flex justify-center">
+            <button
+              class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
